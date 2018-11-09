@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x12\x61rchitecture.proto\"8\n\tArchProto\x12\x10\n\x08\x61\x63\x63uracy\x18\x01 \x01(\x02\x12\x19\n\x05\x63\x65lls\x18\x02 \x03(\x0b\x32\n.CellProto\"&\n\tCellProto\x12\x19\n\x05nodes\x18\x01 \x03(\x0b\x32\n.NodeProto\"\x1c\n\tNodeProto\x12\x0f\n\x07\x63ontent\x18\x01 \x03(\tb\x06proto3')
+  serialized_pb=_b('\n\x12\x61rchitecture.proto\"D\n\tArchProto\x12\x10\n\x08\x61\x63\x63uracy\x18\x01 \x01(\x02\x12\n\n\x02id\x18\x02 \x01(\x05\x12\x19\n\x05\x63\x65lls\x18\x03 \x03(\x0b\x32\n.CellProto\"&\n\tCellProto\x12\x19\n\x05nodes\x18\x01 \x03(\x0b\x32\n.NodeProto\"\x1c\n\tNodeProto\x12\x0f\n\x07\x63ontent\x18\x01 \x03(\tb\x06proto3')
 )
 
 
@@ -40,8 +40,15 @@ _ARCHPROTO = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='cells', full_name='ArchProto.cells', index=1,
-      number=2, type=11, cpp_type=10, label=3,
+      name='id', full_name='ArchProto.id', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='cells', full_name='ArchProto.cells', index=2,
+      number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -59,7 +66,7 @@ _ARCHPROTO = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=22,
-  serialized_end=78,
+  serialized_end=90,
 )
 
 
@@ -89,8 +96,8 @@ _CELLPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=80,
-  serialized_end=118,
+  serialized_start=92,
+  serialized_end=130,
 )
 
 
@@ -120,8 +127,8 @@ _NODEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=120,
-  serialized_end=148,
+  serialized_start=132,
+  serialized_end=160,
 )
 
 _ARCHPROTO.fields_by_name['cells'].message_type = _CELLPROTO

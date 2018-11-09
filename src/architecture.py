@@ -7,15 +7,19 @@ class Arch:
 
     def __init__(self, arch_proto=None):
         self.accuracy = 0
+        self.id = 0
         self.arch = []
         if arch_proto:
             for cell_id, cell in enumerate(arch_proto.cells):
                 self.arch.append(Cell(cell).nodes)
                 self.accuracy = arch_proto.accuracy
+            self.accuracy = arch_proto.accuracy
+            self.id = arch_proto.id
 
     def to_proto(self):
         arch_proto = architecture_pb2.ArchProto()
         arch_proto.accuracy = self.accuracy
+        arch_proto.id = self.id
 
         for cell_id, cell in enumerate(self.arch):
             ce = arch_proto.cells.add()    # type of ce is CellProto
